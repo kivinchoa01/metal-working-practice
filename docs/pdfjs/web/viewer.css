@@ -2243,9 +2243,14 @@ body {
   cursor: default;
 }
 
-/* Custom: keep external link annotations clickable in presentation mode */
-.pdfPresentationMode:-webkit-full-screen .annotationLayer section.linkAnnotation,
+/* Custom: keep external link annotations clickable in presentation mode.
+   Keep the prefixed selector in a separate rule: Firefox does not recognize
+   :-webkit-full-screen and would otherwise discard the whole selector list. */
 .pdfPresentationMode:fullscreen .annotationLayer section.linkAnnotation {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.pdfPresentationMode:-webkit-full-screen .annotationLayer section.linkAnnotation {
   pointer-events: auto;
   cursor: pointer;
 }
