@@ -2243,6 +2243,13 @@ body {
   cursor: default;
 }
 
+/* Custom: keep external link annotations clickable in presentation mode */
+.pdfPresentationMode:-webkit-full-screen .annotationLayer section.linkAnnotation,
+.pdfPresentationMode:fullscreen .annotationLayer section.linkAnnotation {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
 #outerContainer {
   width: 100%;
   height: 100%;

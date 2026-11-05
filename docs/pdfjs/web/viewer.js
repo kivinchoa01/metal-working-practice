@@ -9800,7 +9800,7 @@ class PDFPresentationMode {
     if (evt.button !== 0) {
       return;
     }
-    if (evt.target.href && evt.target.parentNode?.hasAttribute("data-internal-link")) {
+    if (evt.target.href) {
       return;
     }
     evt.preventDefault();
@@ -13957,6 +13957,9 @@ class AnnotationLayerBuilder {
       if (section.hasAttribute("data-internal-link")) {
         continue;
       }
+      if (section.classList?.contains("linkAnnotation")) {
+        continue;
+      }
       section.inert = disableFormElements;
     }
   }
@@ -15417,7 +15420,7 @@ class BasePreferences {
     "enablePrintAutoRotate": true,
     "enableScripting": true,
     "enableStampEditor": true,
-    "externalLinkTarget": 0,
+    "externalLinkTarget": 2,
     "historyUpdateUrl": false,
     "ignoreDestinationZoom": false,
     "forcePageColors": false,
