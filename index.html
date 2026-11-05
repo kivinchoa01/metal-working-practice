@@ -48,5 +48,119 @@
   <iframe src="docs/pdfjs/web/viewer.html?file=https://cdn.jsdelivr.net/gh/kivinchoa01/metal-working-practice@master/metalworkingpractice.pdf#pagemode=none"
           title="金工实习课件" allow="fullscreen" allowfullscreen></iframe>
 </main>
+<script>
+(function () {
+  const frame = document.querySelector('main iframe');
+  const PANEL_ID = 'wp-link-panel';
+
+  // B 站视频页转换为可嵌入的播放器地址
+  function embedUrl(url) {
+    try {
+      const u = new URL(url);
+      if (/(^|\.)bilibili\.com$/i.test(u.hostname) && /^\/video\//.test(u.pathname)) {
+        const m = u.pathname.match(/\/video\/(BV[0-9A-Za-z]+)/);
+        if (m) {
+          return 'https://player.bilibili.com/player.html?bvid=' + m[1] +
+                 '&page=1&autoplay=0';
+        }
+      }
+    } catch (e) { /* 保持原地址 */ }
+    return url;
+  }
+
+  function openPanel(url, doc) {
+    const host = doc.getElementById('viewerContainer') || doc.body;
+    let panel = doc.getElementById(PANEL_ID);
+    if (!panel) {
+      const style = doc.createElement('style');
+      style.textContent = [
+        '#' + PANEL_ID + ' { position: fixed; left: 50%; top: 50%;',
+        '  transform: translate(-50%, -50%); width: min(960px, 76vw);',
+        '  height: min(620px, 76vh); min-width: 360px; min-height: 240px;',
+        '  display: flex; flex-direction: column; overflow: hidden; resize: both;',
+        '  background: #fff; border-radius: 10px;',
+        '  box-shadow: 0 24px 80px rgba(0,0,0,.55); z-index: 60000; }',
+        '#' + PANEL_ID + ' .wp-bar { display: flex; align-items: center; gap: 8px;',
+        '  padding: 7px 12px; background: #7a1f1f; color: #fff;',
+        '  font: 13px/1.4 "Microsoft YaHei", system-ui, sans-serif; }',
+        '#' + PANEL_ID + ' .wp-title { flex: 1; overflow: hidden;',
+        '  text-overflow: ellipsis; white-space: nowrap; }',
+        '#' + PANEL_ID + ' button { font: 12px/1 inherit; color: #fff;',
+        '  background: transparent; border: 1px solid rgba(255,255,255,.55);',
+        '  border-radius: 12px; padding: 4px 9px; cursor: pointer; }',
+        '#' + PANEL_ID + ' button:hover { background: rgba(255,255,255,.15); }',
+        '#' + PANEL_ID + ' .wp-close { font-size: 16px; line-height: 1;',
+        '  padding: 0 8px; border-radius: 50%; }',
+        '#' + PANEL_ID + ' iframe { flex: 1; width: 100%; border: 0; background: #fff; }'
+      ].join('\n');
+      doc.head.appendChild(style);
+
+      panel = doc.createElement('div');
+      panel.id = PANEL_ID;
+      panel.innerHTML =
+        '<div class="wp-bar"><span class="wp-title"></span>' +
+        '<button type="button" class="wp-ext">新窗口</button>' +
+        '<button type="button" class="wp-close" aria-label="关闭">×</button></div>' +
+        '<iframe class="wp-frame" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>';
+      host.appendChild(panel);
+
+      // 阻止演示模式的“点击翻页”处理接管浮层内的交互
+      ['mousedown', 'click', 'dblclick'].forEach(function (t) {
+        panel.addEventListener(t, function (e) { e.stopPropagation(); });
+      });
+
+      panel.querySelector('.wp-close').addEventListener('click', function () {
+        closePanel(doc);
+      });
+      panel.querySelector('.wp-ext').addEventListener('click', function () {
+        const w = Math.min(960, Math.round(screen.availWidth * 0.7));
+        const h = Math.min(640, Math.round(screen.availHeight * 0.7));
+        const left = Math.round((screen.availWidth - w) / 2);
+        const top = Math.round((screen.availHeight - h) / 2);
+        window.open(panel.dataset.url, '_blank',
+          'popup=yes,width=' + w + ',height=' + h + ',left=' + left + ',top=' + top);
+      });
+    }
+
+    const embed = embedUrl(url);
+    panel.dataset.url = url;
+    let title = url;
+    try {
+      const u = new URL(url);
+      title = u.hostname + (embed !== url ? ' · B站播放器' : '');
+    } catch (e) { /* 保持原地址 */ }
+    panel.querySelector('.wp-title').textContent = title;
+    const f = panel.querySelector('.wp-frame');
+    if (f.getAttribute('src') !== embed) f.src = embed;
+  }
+
+  function closePanel(doc) {
+    const panel = doc.getElementById(PANEL_ID);
+    if (!panel) return;
+    const f = panel.querySelector('.wp-frame');
+    if (f) f.src = 'about:blank';
+    panel.remove();
+  }
+
+  function setup() {
+    const doc = frame.contentDocument;
+    if (!doc) return;
+    doc.addEventListener('click', function (e) {
+      const a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      const href = a.href;
+      if (!/^https?:\/\//i.test(href)) return;
+      const sec = a.closest('section');
+      if (sec && sec.hasAttribute('data-internal-link')) return;
+      e.preventDefault();
+      e.stopPropagation();
+      openPanel(href, doc);
+    }, true);
+  }
+
+  frame.addEventListener('load', setup);
+  if (frame.contentDocument && frame.contentDocument.readyState === 'complete') setup();
+})();
+</script>
 </body>
 </html>

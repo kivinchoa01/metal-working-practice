@@ -90,7 +90,8 @@ xelatex -interaction=nonstopmode metalworkingpractice.tex
 - GitHub 镜像仓库：<https://github.com/kivinchoa01/metal-working-practice>
 - 首页 `index.html` 内嵌自托管 PDF.js 阅读器（`docs/pdfjs/`），支持目录、缩放、手机阅读
 - 课件最后一页的二维码与超链接已指向该在线地址
-- 演示模式（全屏）下外部超链接可点击，并在新标签页打开
+- 演示模式（全屏）下点击外部超链接，会在当前画面上弹出可关闭、可缩放的站内浮层，**不退出全屏**；B 站视频自动转换为内嵌播放器
+- 浮层右上角提供"新窗口"按钮，用于少数禁止 iframe 嵌入的网站（改用独立窗口，此时会退出全屏）
 - PDF 正文通过 jsDelivr CDN 加载以提升国内访问速度；仓库内保留同源副本作为兜底
 - 更新 PDF 后 jsDelivr 的 `@master` 缓存最长约 12 小时，可访问
   <https://purge.jsdelivr.net/gh/kivinchoa01/metal-working-practice@master/metalworkingpractice.pdf>
@@ -102,7 +103,7 @@ xelatex -interaction=nonstopmode metalworkingpractice.tex
 
 1. `web/viewer.js` 的 `validateFileURL` 允许从 `cdn.jsdelivr.net` 加载本仓库的 PDF（跨域）
 2. 演示模式（全屏）下不再把链接注释设为 `inert`，并在 `web/viewer.css` 中恢复 `section.linkAnnotation` 的 `pointer-events`，使外部超链接可点击
-3. `externalLinkTarget` 默认值改为 `2`，外部链接在新标签页打开，不打断放映
+3. `externalLinkTarget` 默认值改为 `2`，PDF.js 自身的外部链接行为改为新标签页；网页版 `index.html` 会拦截课件中的外链并改用站内浮层，只有点击浮层上的"新窗口"按钮才打开独立窗口
 
 ## 版本管理
 
