@@ -89,6 +89,7 @@ xelatex -interaction=nonstopmode metalworkingpractice.tex
 - 地址：**<https://kivinchoa01.github.io/metal-working-practice/>**
 - GitHub 镜像仓库：<https://github.com/kivinchoa01/metal-working-practice>
 - 首页 `index.html` 内嵌自托管 PDF.js 阅读器（`docs/pdfjs/`），支持目录、缩放、手机阅读
+- 课件最后一页的二维码与超链接已指向该在线地址
 - PDF 正文通过 jsDelivr CDN 加载以提升国内访问速度；仓库内保留同源副本作为兜底
 - 更新 PDF 后 jsDelivr 的 `@master` 缓存最长约 12 小时，可访问
   <https://purge.jsdelivr.net/gh/kivinchoa01/metal-working-practice@master/metalworkingpractice.pdf>

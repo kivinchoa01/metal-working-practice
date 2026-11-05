@@ -990,7 +990,7 @@
 
 \centering
 \vspace{1.5cm}
-\qrcode[height=4cm]{https://gitee.com/zhou-jiming/metal-working-practice}
+\qrcode[height=4cm]{https://kivinchoa01.github.io/metal-working-practice/}
 
 
-\href{https://gitee.com/zhou-jiming/metal-working-practice}{课件在gitee上分享}
+\href{https://kivinchoa01.github.io/metal-working-practice/}{课件在线访问}
