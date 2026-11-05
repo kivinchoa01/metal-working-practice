@@ -1,6 +1,6 @@
 
 # -*- org-confirm-babel-evaluate: nil -*-
-#+TITLE: \fHei 金工实习（冷加工）
+#+TITLE: \fHei 金工实习（冷、热加工）
 #+AUTHOR: 周计明
 #+EMAIL: zhoujm@nwpu.edu.cn
 #+DATE:  2026年 \cdot 秋
@@ -33,7 +33,7 @@
 #+latex_header: \usepackage[normalem]{ulem}
 #+latex_header: \usepackage{fontspec}
 #+latex_header: \usepackage{subfigure}
-#+latex_header: \usepackage{amsmath,array,ulem,qrcode}
+#+latex_header: \usepackage{amsmath,array,ulem,qrcode,hyperref}
 #+latex_header: \usepackage{xeCJK}
 #+latex_header: \usepackage{tikz}
 #+latex_header: \usepackage{bloques}
@@ -563,7 +563,7 @@
 + 型砂的粘合方式
  + *湿砂型* ：由粘土粘结，需仔细控制湿度水平
  + *干砂型* ：前期制作方法与粘土粘结一样，模具做好后加热到100 \(^\circ\)C以上干燥去除水分
- + *CO\(_2\)水玻璃砂型* ：以硅酸钠代替火粘土进行粘结，模具做好后通CO\(_2\)气体进行固化，铸后易破碎
+ + *CO\(_2\)水玻璃砂型* ：以硅酸钠代替耐火粘土[fn::fire clay，耐火度大于1580\(^\circ\)C的粘土]进行粘结，模具做好后通CO\(_2\)气体进行固化，铸后易破碎
  + *树脂砂型* ：使用有机或无机粘结剂粘合，尺寸控制良好，表面粗糙度低
 *** 型芯
 ****                                                                  :BMCOL:
@@ -985,4 +985,12 @@
 1. 耿俊浩（译），机械制造基础及实践（Workshop Processes, Practices and Materials 5th Edition），北京：机械工业出版社，2023.9
 1. 黄明宇，金属实习（下册，冷加工，第3版），北京：机械工业出版社，2025.2
 1. 柳秉毅，金工实习（上册，热加工，第2版），北京：机械工业出版社，2009.4
-1. 北航、西工大合编，金工实习，北京：国防工业出版社，
+1. 北航、西工大合编，金工实习，北京：国防工业出版社，1984.6
+*** 课件网址
+
+\centering
+\vspace{1.5cm}
+\qrcode[height=4cm]{https://gitee.com/zhou-jiming/metal-working-practice}
+
+
+\href{https://gitee.com/zhou-jiming/metal-working-practice}{课件在gitee上分享}

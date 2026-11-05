@@ -1,4 +1,4 @@
-% Created 2026-09-20 周日 10:30
+% Created 2026-11-05 周四 19:17
 % Intended LaTeX compiler: pdflatex
 \documentclass[bigger,aspectratio=169]{beamer}
 \usepackage[utf8]{inputenc}
@@ -20,7 +20,7 @@
 \usepackage[normalem]{ulem}
 \usepackage{fontspec}
 \usepackage{subfigure}
-\usepackage{amsmath,array,ulem,qrcode}
+\usepackage{amsmath,array,ulem,qrcode,hyperref}
 \usepackage{xeCJK}
 \usepackage{tikz}
 \usepackage{bloques}
@@ -45,7 +45,7 @@
 \usetheme{default}
 \author{周计明}
 \date{2026年 \(\cdot\) 秋}
-\title{\fHei 金工实习（冷加工）}
+\title{\fHei 金工实习（冷、热加工）}
 \institute[西工大]{西北工业大学}
 \makeatletter
 \def\beamer@framenotesbegin{% at beginning of slide
@@ -59,7 +59,7 @@
 \newtcbox{\mybox}{colback=red!5!white,colframe=red!75!black,varwidth upper,top=0mm,bottom=0mm,left=0mm,right=0mm}
 \hypersetup{
  pdfauthor={周计明},
- pdftitle={\fHei 金工实习（冷加工）},
+ pdftitle={\fHei 金工实习（冷、热加工）},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
@@ -73,8 +73,8 @@
 
 
 \section{切削加工概述}
-\label{sec:org1c58066}
-\begin{frame}[label={sec:org68a2fe5}]{切削加工概述}
+\label{sec:org6b1ca3e}
+\begin{frame}[label={sec:org814203d}]{切削加工概述}
 \begin{itemize}
 \item 使用刀具切除工件毛坯（比如\href{https://www.bilibili.com/video/BV11SbJ6rENs/?share_source=copy_web&vd_source=065b5817f3e3c58ce8d6353b4192b896}{手锤锻件毛坯} ）上多余的金属，使工件达到所需的形状、加工精度和表面质量
 \begin{itemize}
@@ -89,8 +89,8 @@
 \end{frame}
 
 \section{划线}
-\label{sec:org668bc56}
-\begin{frame}[label={sec:org0328045}]{划线\footnote{划线只用于指示，最终的精确尺寸必须通过检测来确认}}
+\label{sec:orge282467}
+\begin{frame}[label={sec:org6aedae0}]{划线\footnote{划线只用于指示，最终的精确尺寸必须通过检测来确认}}
 在工件的毛坯或已加工表面上，按照图纸要求的尺寸，准确地划出加工界限
 \begin{itemize}
 \item 指示工件轮廓或孔、槽等特征的位置，合理分配加工余量
@@ -98,7 +98,7 @@
 \item 检查毛坯外形尺寸是否合乎要求，避免不合格毛坯进入加工环节，造成浪费
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:org0b86b24}]{基准 Datum}
+\begin{frame}[label={sec:org485d0df}]{基准 Datum}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 即参考位置，据此得出所有尺寸从而进行全部测量
@@ -119,7 +119,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org1e70f0d}]{划线工具}
+\begin{frame}[label={sec:org2f576b5}]{划线工具}
 \begin{columns}
 \begin{column}{0.4\columnwidth}
 \begin{itemize}
@@ -142,13 +142,13 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgdf1a786}]{V型块和划针盘}
+\begin{frame}[label={sec:org98a7ab0}]{V型块和划针盘}
 \begin{center}
 \includegraphics[page=64, viewport={253.5 165.5 466.1 316.7}, clip,width=7cm]{./WorkshopProcesses.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd359e0b}]{划线染料}
+\begin{frame}[label={sec:org0de9179}]{划线染料}
 划线前用快干的有色染料喷洒或涂刷于金属表面，使划线清晰可见
 
 \begin{center}
@@ -157,9 +157,9 @@
 \end{frame}
 
 \section{钳工}
-\label{sec:org5052a68}
+\label{sec:org663cf52}
 
-\begin{frame}[label={sec:org95d9af8}]{钳工}
+\begin{frame}[label={sec:org183578e}]{钳工}
 以手工操作为主，用手工工具去除材料，装配和修理也属于钳工的工作范围。包括：普通钳工、划线钳工、模具钳工、工具钳工、装配钳工、钻工和维修钳工等
 
 \begin{itemize}
@@ -172,7 +172,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6a49cb9}]{钳工工作场地和夹具}
+\begin{frame}[label={sec:org6c72b51}]{钳工工作场地和夹具}
 \begin{itemize}
 \item 钳工工作台
 \item 台虎钳
@@ -182,7 +182,7 @@
 \includegraphics[width=8cm]{./file-20260904234417030.png}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:org21d40ca}]{锯削}
+\begin{frame}[label={sec:org1c34535}]{锯削}
 \begin{itemize}
 \item 切断或切槽的重要加工方法
 \item 使用手锯进行锯削，手锯由锯弓和锯条组成
@@ -199,7 +199,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org255870a}]{锯条的选择}
+\begin{frame}[label={sec:org3d6dc98}]{锯条的选择}
 \begin{itemize}
 \item \alert{全硬锯条} ：淬硬高速钢制成，硬度很大，寿命较长，但易断，适合于熟练工
 \item \alert{柔性锯条} ：高速钢制成，但仅淬硬锯齿，韧性好，但寿命短，适合于经验不足的人，观看B站视频\href{https://www.bilibili.com/video/BV11SbJ6rENs/?p=2&share_source=copy_web&vd_source=065b5817f3e3c58ce8d6353b4192b896}{钢锯条的铣削加工}
@@ -212,7 +212,7 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:orgfaab61c}]{锯削操作}
+\begin{frame}[label={sec:orgb48bbc0}]{锯削操作}
 \begin{itemize}
 \item 起锯角度约为 10 \(\sim\) 15\(^\circ\)，角度太大易崩齿，太小不易切入
 \item 起锯时往复行程要短，用力要轻，切深2mm后逐渐调至水平正常切削
@@ -223,7 +223,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orga1cd5fd}]{锉削}
+\begin{frame}[label={sec:org3411768}]{锉削}
 \begin{itemize}
 \item 表面加工，提高精度
 \item 锉刀用碳素工具钢制成，经热处理淬硬
@@ -235,7 +235,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd7dd256}]{锉刀种类}
+\begin{frame}[label={sec:org6c593c7}]{锉刀种类}
 \begin{itemize}
 \item 按用途分：钳工锉、整形锉（什锦锉）、特种锉
 \item 按断面形状：平锉、方锉、圆锉、半圆锉和三角锉等
@@ -247,7 +247,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1855d81}]{平面锉削操作}
+\begin{frame}[label={sec:org36c3f19}]{平面锉削操作}
 \begin{itemize}
 \item 锉刀向运动时进行切削，锉刀退回时不抬离工件，有利于去除锉齿上的锉屑，但不施加压力
 \end{itemize}
@@ -257,7 +257,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org1b2d1d2}]{曲面锉削操作}
+\begin{frame}[label={sec:org6242891}]{曲面锉削操作}
 图示依次是：滚锉、横锉、锉削内圆弧面、锉削球面
 \begin{center}
 \includegraphics[page=146, viewport={101.5 156.5 485.0 418.5}, clip,width=9cm]{./metalijxie.pdf}
@@ -265,9 +265,9 @@
 \end{frame}
 
 \section{切削刀具}
-\label{sec:orga5bba79}
+\label{sec:org9ed4b8c}
 
-\begin{frame}[label={sec:org74d1db2}]{切削刀具}
+\begin{frame}[label={sec:org35a3b97}]{切削刀具}
 \begin{itemize}
 \item 切削刀具的材料：红硬度、耐磨性和韧性
 \begin{itemize}
@@ -279,7 +279,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgdb6753d}]{切削速度}
+\begin{frame}[label={sec:org6f7fd7b}]{切削速度}
 \begin{itemize}
 \item 切削刀具与工件之间的相对速度，单位m/min
 \begin{itemize}
@@ -294,7 +294,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org28af4cb}]{刀具的后角 Clearance 和前角 rake}
+\begin{frame}[label={sec:org26fc7e6}]{刀具的后角 Clearance 和前角 rake}
 \begin{figure}[htbp]
 \centering
 \includegraphics[page=122, viewport={256.5 527.0 461.0 605.5}, clip,width=6cm]{./WorkshopProcesses.pdf}
@@ -308,13 +308,13 @@
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:org1fd0c8d}]{不同刀具的前角和后角}
+\begin{frame}[label={sec:orged2fa49}]{不同刀具的前角和后角}
 \begin{center}
 \includegraphics[page=123, viewport={147.5 38.5 428.5 292.5}, clip,width=8cm]{./WorkshopProcesses.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgfee1155}]{车刀刀具角度}
+\begin{frame}[label={sec:org17ad6ff}]{车刀刀具角度}
 \begin{itemize}
 \item 三个辅助平面：基面、切削平面、主剖面
 \item 三面两刃一尖
@@ -330,9 +330,9 @@
 \end{frame}
 
 \section{车削}
-\label{sec:org41048e8}
+\label{sec:org7618e39}
 
-\begin{frame}[label={sec:orge67c587}]{车削工作范围}
+\begin{frame}[label={sec:org5f85c99}]{车削工作范围}
 \begin{itemize}
 \item 回转体表面（\fKai 包括内表面和外表面\normalfont）的主要加工方法
 \item 阶梯轴
@@ -345,7 +345,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc70ad08}]{车床结构}
+\begin{frame}[label={sec:orgbf63298}]{车床结构}
 \begin{itemize}
 \item 主轴箱实现变速，通过带传动、齿轮传动将电机转动传送到主轴，主轴的调速范围在40 \(\sim\) 2500 r/min之间
 \end{itemize}
@@ -354,7 +354,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd4b5e30}]{溜板箱和刀架}
+\begin{frame}[label={sec:orgeb798d5}]{溜板箱和刀架}
 \begin{center}
 \includegraphics[page=46, viewport={117.3 472.5 464.6 748.1}, clip,width=8cm]{./metalijxie.pdf}
 \end{center}
@@ -365,7 +365,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd421481}]{零件装夹}
+\begin{frame}[label={sec:org59c0eb9}]{零件装夹}
 \begin{itemize}
 \item \alert{三爪卡盘} ：三个卡爪同时移动，自定心，装夹小型轴类、盘套类零件
 \item \alert{四爪卡盘} ：四个卡爪独立移动，夹紧力大，安装调整困难，不规则的较大零件
@@ -376,7 +376,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org52fae7d}]{前后顶尖装夹工件}
+\begin{frame}[label={sec:org6490e4b}]{前后顶尖装夹工件}
 \begin{itemize}
 \item 双顶尖装夹工件，通过两端面锥面定位，定位精度高
 \end{itemize}
@@ -394,7 +394,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orga1b15d6}]{跟刀架和中心架}
+\begin{frame}[label={sec:org62d64c0}]{跟刀架和中心架}
 \begin{itemize}
 \item 跟刀架固定在床鞍上跟随刀架一起移动，适合光轴加工
 \item 中心架固定在床身上，如可用于车削长轴端面或镗内孔时
@@ -405,7 +405,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org29e6983}]{花盘装夹不规则零件}
+\begin{frame}[label={sec:orgeac916d}]{花盘装夹不规则零件}
 \begin{itemize}
 \item 盘面上许多长槽用来穿入压紧螺栓，花盘端面与其轴线垂直
 \item 为减小质量偏心引起的振动，还需要加平衡块
@@ -417,9 +417,9 @@
 \end{frame}
 
 \section{铣削}
-\label{sec:org8199c4d}
+\label{sec:org57f14d7}
 
-\begin{frame}[label={sec:orga745835}]{铣削}
+\begin{frame}[label={sec:org524f0b9}]{铣削}
 \begin{itemize}
 \item 平面、沟槽、成形面的主要加工方法
 \item 设备：卧式铣床和立式铣床
@@ -431,7 +431,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org9107c75}]{卧式铣床和立式铣床}
+\begin{frame}[label={sec:org6711ac2}]{卧式铣床和立式铣床}
 \begin{columns}[b]
 \begin{column}{0.5\columnwidth}
 \begin{figure}[htbp]
@@ -452,7 +452,7 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:orga21e4aa}]{铣刀及铣削工作}
+\begin{frame}[label={sec:org84d54a2}]{铣刀及铣削工作}
 观看B站视频\href{https://www.bilibili.com/video/BV1rZbJ6KErG/?share_source=copy_web&vd_source=065b5817f3e3c58ce8d6353b4192b896}{铣刀的铣削加工}
 
 \begin{columns}
@@ -468,7 +468,7 @@
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}[label={sec:org5c6d56c}]{分度头}
+\begin{frame}[label={sec:org80e8322}]{分度头}
 \begin{columns}[b]
 \begin{column}{0.6\columnwidth}
 \begin{center}
@@ -484,7 +484,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgcfaca57}]{铣削方式--顺铣与逆铣}
+\begin{frame}[label={sec:org69ab0b8}]{铣削方式--顺铣与逆铣}
 \begin{itemize}
 \item \alert{顺铣} ：铣刀与工件接触处的旋转方向和工件的进给方向相同
 \item \alert{逆铣} ：铣刀切削刃的运动方向和工件的进给方向相反
@@ -496,8 +496,8 @@
 \end{frame}
 
 \section{工程材料及热处理}
-\label{sec:orgd563823}
-\begin{frame}[label={sec:orgedb3f1d}]{工程材料及其分类}
+\label{sec:org5a34d3e}
+\begin{frame}[label={sec:org0af0e8e}]{工程材料及其分类}
 \begin{itemize}
 \item 各种工程领域中应用的材料
 \end{itemize}
@@ -507,7 +507,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgac882a4}]{工程材料的性能}
+\begin{frame}[label={sec:org87b7727}]{工程材料的性能}
 \begin{itemize}
 \item 物理性能
 \begin{itemize}
@@ -524,7 +524,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org99693f3}]{典型材料性能对比}
+\begin{frame}[label={sec:org5858569}]{典型材料性能对比}
 \begin{center}
 \begin{tabular}{lrrr}
 \hline
@@ -540,7 +540,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge29585b}]{铁碳合金（钢铁）}
+\begin{frame}[label={sec:org7873776}]{铁碳合金（钢铁）}
 \begin{itemize}
 \item 碳的质量分数低于2\%是钢，高于2\%是铁
 \item \alert{碳素钢} ：主要成分是铁和碳，包括\uwave{碳素结构钢}和\uwave{碳素工具钢}
@@ -553,7 +553,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgbe94443}]{钢铁材料的牌号}
+\begin{frame}[label={sec:orgfc645f3}]{钢铁材料的牌号}
 \begin{itemize}
 \item \alert{碳素钢}
 \begin{itemize}
@@ -570,7 +570,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org09160fd}]{热处理}
+\begin{frame}[label={sec:org6d07a73}]{热处理}
 \begin{itemize}
 \item 对固态金属进行一次或多次地加热和冷却以获得所需力学性能的过程
 \item 冷却速度对钢的组织影响很大，依据冷却速度的不同，热处理分为： \alert{退火、正火、淬火和回火}
@@ -580,7 +580,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org7ccdc86}]{热处理的加热温度范围}
+\begin{frame}[label={sec:orgb225080}]{热处理的加热温度范围}
 \begin{itemize}
 \item \alert{退火} （\fKai 随炉冷却\normalfont ）、 \alert{正火} （\fKai 出炉空气中冷却\normalfont ）、 \alert{淬火} （\fKai 水冷或油冷\normalfont ）和 \alert{回火} （\fKai 高温、中温、低温回火\normalfont ）
 \end{itemize}
@@ -601,7 +601,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org827a75f}]{回火温度与硬度的关系}
+\begin{frame}[label={sec:org1173267}]{回火温度与硬度的关系}
 \begin{itemize}
 \item 淬火后进行回火，降低硬度和脆性，恢复韧性
 \item 淬火温度越高，钢的韧性越好
@@ -612,9 +612,9 @@
 \end{frame}
 
 \section{铸造}
-\label{sec:orgd18f9bd}
+\label{sec:org0f57b6b}
 
-\begin{frame}[label={sec:org4b3f6f6}]{砂型铸造}
+\begin{frame}[label={sec:org252736e}]{砂型铸造}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{itemize}
@@ -636,7 +636,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org4946615}]{砂型铸造的基本步骤}
+\begin{frame}[label={sec:orgb4b9969}]{砂型铸造的基本步骤}
 \begin{itemize}
 \item 配制型（芯）砂、模样准备 \(\rightarrow\) 造型 \(\rightarrow\) 浇注 \(\rightarrow\) 冷却凝固  \(\rightarrow\) 落砂清理 \(\rightarrow\) 检验 \(\rightarrow\) 合格铸件
 \end{itemize}
@@ -645,7 +645,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org5f88bc3}]{模样准备}
+\begin{frame}[label={sec:org8dbe6e9}]{模样准备}
 \begin{itemize}
 \item 模样、底板、砂箱按一定空间位置放置好，填入型砂并舂紧
 \item 用手将模样周围的型砂压紧（如图）
@@ -657,7 +657,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org167d747}]{型砂}
+\begin{frame}[label={sec:org9c0407b}]{型砂}
 \begin{itemize}
 \item 具有渗透性（\fKai 多孔性\normalfont ），允许气体和蒸汽逸出
 \item 足够强度承受大量熔融金属
@@ -666,12 +666,12 @@
 \begin{itemize}
 \item \alert{湿砂型} ：由粘土粘结，需仔细控制湿度水平
 \item \alert{干砂型} ：前期制作方法与粘土粘结一样，模具做好后加热到100 \(^\circ\)C以上干燥去除水分
-\item \alert{CO\(_2\)水玻璃砂型} ：以硅酸钠代替火粘土进行粘结，模具做好后通CO\(_2\)气体进行固化，铸后易破碎
+\item \alert{CO\(_2\)水玻璃砂型} ：以硅酸钠代替耐火粘土\footnote{fire clay，耐火度大于1580\(^\circ\)C的粘土}进行粘结，模具做好后通CO\(_2\)气体进行固化，铸后易破碎
 \item \alert{树脂砂型} ：使用有机或无机粘结剂粘合，尺寸控制良好，表面粗糙度低
 \end{itemize}
 \end{itemize}
 \end{frame}
-\begin{frame}[label={sec:orgf3d0f07}]{型芯}
+\begin{frame}[label={sec:org0351ad4}]{型芯}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
@@ -687,7 +687,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgce087ce}]{真空铸造（V法铸造）}
+\begin{frame}[label={sec:org52e7284}]{真空铸造（V法铸造）}
 \begin{itemize}
 \item 砂型铸造的变体，使用不含水或粘结剂的干砂造型，模具型腔通过真空保持一定的形状
 \item 无需拔模角，最小壁厚可达2.3mm
@@ -708,7 +708,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org84af4da}]{熔模铸造（失蜡铸造）}
+\begin{frame}[label={sec:orgdd15b60}]{熔模铸造（失蜡铸造）}
 制作蜡模 \(\rightarrow\) 涂挂耐火材料 \(\rightarrow\) 干燥结壳（熔模壳） \(\rightarrow\) 加热焙烧熔模，蜡模流出，形成浇注型腔 \(\rightarrow\) 浇注、凝固 \(\rightarrow\) 清理模壳，获得铸件
 \begin{columns}
 \begin{column}{0.3\columnwidth}
@@ -746,7 +746,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org8536bc6}]{改进的熔模铸造工艺}
+\begin{frame}[label={sec:org08a7474}]{改进的熔模铸造工艺}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
@@ -763,7 +763,7 @@
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}[label={sec:orgccf0f27}]{消失模铸造（实型铸造）}
+\begin{frame}[label={sec:org257f88f}]{消失模铸造（实型铸造）}
 \begin{columns}
 \begin{column}{0.6\columnwidth}
 \begin{itemize}
@@ -781,7 +781,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgf0e02be}]{壳型铸造}
+\begin{frame}[label={sec:orgd4de617}]{壳型铸造}
 \begin{itemize}
 \item 使用细二氧化硅或锆石砂与热固性树脂粘合制备薄壳模具
 \end{itemize}
@@ -799,7 +799,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org02ec708}]{压铸}
+\begin{frame}[label={sec:orgbb239bf}]{压铸}
 \begin{itemize}
 \item 高压(5 \(\sim\) 150MPa)、高速充型
 \end{itemize}
@@ -808,7 +808,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org3b233f3}]{常见铸造缺陷}
+\begin{frame}[label={sec:orga013629}]{常见铸造缺陷}
 \begin{columns}
 \begin{column}{0.25\columnwidth}
 气孔
@@ -866,9 +866,9 @@
 \end{frame}
 
 \section{锻造}
-\label{sec:org19637b8}
+\label{sec:org410dc2f}
 
-\begin{frame}[label={sec:orgf674109}]{锻造}
+\begin{frame}[label={sec:org0230de0}]{锻造}
 下料\(\rightarrow\) 加热 \(\rightarrow\) 锻造 \(\rightarrow\) 冷却 \(\rightarrow\) 热处理 \(\rightarrow\) 清理 \(\rightarrow\) 检验 \(\rightarrow\) 锻件
 
 \begin{columns}
@@ -891,7 +891,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org3ea2497}]{常用金属材料的锻造温度范围}
+\begin{frame}[label={sec:org491af1a}]{常用金属材料的锻造温度范围}
 \begin{itemize}
 \item 不出现过热或过烧的前提下始锻温度 \alert{尽量高}
 \item 保证停锻前金属有足够的塑性的前提下，终锻温度 \alert{尽量低}
@@ -902,13 +902,13 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc050062}]{自由锻工具}
+\begin{frame}[label={sec:org8fa8861}]{自由锻工具}
 \begin{center}
 \includegraphics[page=67, viewport={86.0 54.3 528.0 391.6}, clip,width=11cm]{./metaljixiehot.pdf}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org4f8d2b2}]{自由锻工序}
+\begin{frame}[label={sec:orgf175324}]{自由锻工序}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \begin{center}
@@ -936,7 +936,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org7bca224}]{闭式模锻 Close-die forging}
+\begin{frame}[label={sec:org91b627f}]{闭式模锻 Close-die forging}
 \begin{itemize}
 \item 将金属置于上下锻模的型槽中，上下模对击驱使金属流动，充满型槽得到锻件
 \item \alert{单模膛锻模} ：仅有一个成形模膛
@@ -948,7 +948,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge47e9ff}]{自由锻和模锻视频}
+\begin{frame}[label={sec:org514bb36}]{自由锻和模锻视频}
 \begin{columns}
 \begin{column}{0.5\columnwidth}
 \href{https://www.bilibili.com/video/BV1hW411u72k/?share_source=copy_web&vd_source=065b5817f3e3c58ce8d6353b4192b896}{B站拔长视频} \qrcode[height=2cm]{https://www.bilibili.com/video/BV1hW411u72k/?share_source=copy_web&vd_source=065b5817f3e3c58ce8d6353b4192b896}
@@ -959,7 +959,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org03e1894}]{锤上模锻与压力机上模锻}
+\begin{frame}[label={sec:org26717f1}]{锤上模锻与压力机上模锻}
 \begin{itemize}
 \item 锤上模锻依靠 \alert{冲击力} 成形，精度不高、振动和噪声大
 \item 压力机（\fKai 液压及机械压力\normalfont ）上模锻振动小、易维护、操作简单
@@ -970,7 +970,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org97c1314}]{轧制 Rolling}
+\begin{frame}[label={sec:org2584451}]{轧制 Rolling}
 \begin{itemize}
 \item 通过旋转轧辊对金属坯料施加压力，使其产生连续塑性变形，从而改变截面形状、尺寸和性能
 \item 厚度减薄、长度增加、宽度略有增加，保持体积守恒
@@ -981,7 +981,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org8cd6990}]{挤压 Extrusion}
+\begin{frame}[label={sec:orge0616b4}]{挤压 Extrusion}
 \begin{itemize}
 \item 生产任意复杂截面的产品
 \item 表面质量好、尺寸精度高
@@ -1005,7 +1005,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org8e89e06}]{拉拔 Drawing}
+\begin{frame}[label={sec:org71f77cf}]{拉拔 Drawing}
 \begin{itemize}
 \item 用于生产线材和棒材
 \item 保持良好润滑，提高模具寿命和线材表面质量
@@ -1016,9 +1016,9 @@
 \end{frame}
 
 \section{冲压加工}
-\label{sec:org8dde1e7}
+\label{sec:org1f5009d}
 
-\begin{frame}[label={sec:org383aed7}]{冲压加工}
+\begin{frame}[label={sec:org78b6b05}]{冲压加工}
 \begin{itemize}
 \item 对金属板材施加力，使其发生变形（如弯曲）或分离（落料或冲孔）的过程
 \item 凸模和凹模之间的间隙以每侧加工材料厚度的百分比表示（\fKai 参照标准或手册\normalfont ）
@@ -1044,7 +1044,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:org225c20e}]{落料 Blanking}
+\begin{frame}[label={sec:orgb1351d1}]{落料 Blanking}
 \begin{itemize}
 \item 用落料模从坯料上冲下所需的毛坯，冲剩的是余料
 \end{itemize}
@@ -1053,7 +1053,7 @@
 \includegraphics[page=47, viewport={213.9 191.0 460.0 257.5}, clip,width=10cm]{./npupractice.pdf}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:org3fa057f}]{排样}
+\begin{frame}[label={sec:orgee3485f}]{排样}
 \begin{itemize}
 \item 冲压件坯件的形状和大小在板料或条料上排列布置的方式
 \begin{itemize}
@@ -1067,7 +1067,7 @@
 \includegraphics[page=86, viewport={97.3 78.3 503.3 196.9}, clip,width=8cm]{./metaljixiehot.pdf}
 \end{center}
 \end{frame}
-\begin{frame}[label={sec:orgb7c409d}]{冲孔 Piecing}
+\begin{frame}[label={sec:org984305c}]{冲孔 Piecing}
 \begin{itemize}
 \item 用冲孔模在板料或工件上冲出所需的孔，被冲下的是余料
 \end{itemize}
@@ -1077,7 +1077,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgb2fabd3}]{落料冲孔凸凹模尺寸计算}
+\begin{frame}[label={sec:orge567312}]{落料冲孔凸凹模尺寸计算}
 \begin{itemize}
 \item 凸模决定冲孔尺寸大小，凹模决定落料尺寸的大小
 \item 冲孔时冲出的材料为废料，落料时冲出的材料的产品
@@ -1087,7 +1087,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org00a787d}]{弯曲}
+\begin{frame}[label={sec:orge837ae9}]{弯曲}
 \begin{itemize}
 \item 弯曲是变形工序，弯曲时坯料内层被压缩，易起皱；外层受拉伸，易拉裂
 \item 弯曲线尽可能与板料纤维组织方向垂直
@@ -1099,7 +1099,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd5ba1eb}]{拉深}
+\begin{frame}[label={sec:org94d1108}]{拉深}
 \begin{itemize}
 \item 坯料（\fKai 通常由落料获得\normalfont）在冲模具作用下成为杯形或盒形工件
 \item 冲头和凹模边缘做成圆角，避免拉深时开裂
@@ -1112,7 +1112,7 @@
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge6486dc}]{变薄拉深 Ironing(取``熨烫''一义)}
+\begin{frame}[label={sec:org1a81264}]{变薄拉深 Ironing(取``熨烫''一义)}
 \begin{itemize}
 \item 凸模与凹模之间的间隙小于坯料的原始厚度
 \item 经过初步拉深成形的空心杯状件（预成形件）被推过这个狭窄间隙时，侧壁金属在均匀压应力作用下发生塑性变形
@@ -1129,13 +1129,21 @@
 \end{frame}
 
 \section{参考教材}
-\label{sec:org4d810f2}
-\begin{frame}[label={sec:orga904df0}]{参考教材}
+\label{sec:org8ed4c9d}
+\begin{frame}[label={sec:org7efef73}]{参考教材}
 \begin{enumerate}
 \item 耿俊浩（译），机械制造基础及实践（Workshop Processes, Practices and Materials 5th Edition），北京：机械工业出版社，2023.9
 \item 黄明宇，金属实习（下册，冷加工，第3版），北京：机械工业出版社，2025.2
 \item 柳秉毅，金工实习（上册，热加工，第2版），北京：机械工业出版社，2009.4
-\item 北航、西工大合编，金工实习，北京：国防工业出版社，
+\item 北航、西工大合编，金工实习，北京：国防工业出版社，1984.6
 \end{enumerate}
+\end{frame}
+\begin{frame}[label={sec:org5f8d347}]{课件网址}
+\centering
+\vspace{1.5cm}
+\qrcode[height=4cm]{https://gitee.com/zhou-jiming/metal-working-practice}
+
+
+\href{https://gitee.com/zhou-jiming/metal-working-practice}{课件在gitee上分享}
 \end{frame}
 \end{document}
