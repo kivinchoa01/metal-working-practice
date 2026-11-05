@@ -84,10 +84,22 @@ xelatex -interaction=nonstopmode metalworkingpractice.tex
 3. 柳秉毅，金工实习（上册·热加工，第 2 版），北京：机械工业出版社，2009.
 4. 北航、西工大合编，金工实习，北京：国防工业出版社，1984.6.
 
+## 在线网页版
+
+- 地址：**<https://kivinchoa01.github.io/metal-working-practice/>**
+- GitHub 镜像仓库：<https://github.com/kivinchoa01/metal-working-practice>
+- 首页 `index.html` 内嵌自托管 PDF.js 阅读器（`docs/pdfjs/`），支持目录、缩放、手机阅读
+- PDF 正文通过 jsDelivr CDN 加载以提升国内访问速度；仓库内保留同源副本作为兜底
+- 更新 PDF 后 jsDelivr 的 `@master` 缓存最长约 12 小时，可访问
+  <https://purge.jsdelivr.net/gh/kivinchoa01/metal-working-practice@master/metalworkingpractice.pdf>
+  手动刷新缓存
+
 ## 版本管理
 
-- 远程仓库：`git@gitee.com:zhou-jiming/metal-working-practice.git`
+- 主远程仓库（Gitee）：`git@gitee.com:zhou-jiming/metal-working-practice.git`
+- GitHub 镜像：`git@github01:kivinchoa01/metal-working-practice.git`（主机别名 `github01`，密钥 `id_ed25519github`）
 - 分支：`master`
+- 同步推送：`git push origin master && git push github master`
 - `.gitignore` 已忽略 LaTeX 编译中间文件（`*.aux`、`*.log`、`*.nav`、`*.snm`、`*.toc`、`*.bbl`、`*.blg`、`*.fls`、`*.fdb_latexmk`、`*.synctex.gz` 等）及 `*~`、`*.bak` 等备份文件。
 - 源文件、图片与 PDF 均纳入版本管理。
 

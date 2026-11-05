@@ -3220,8 +3220,11 @@ exports.PDFViewerApplication = PDFViewerApplication;
       if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)) {
         return;
       }
-      const fileOrigin = new URL(file, window.location.href).origin;
-      if (fileOrigin !== viewerOrigin) {
+      const fileURL = new URL(file, window.location.href);
+      const fileOrigin = fileURL.origin;
+      const trustedCdn = fileURL.hostname === "cdn.jsdelivr.net" &&
+        fileURL.pathname.startsWith("/gh/kivinchoa01/metal-working-practice@");
+      if (fileOrigin !== viewerOrigin && !trustedCdn) {
         throw new Error("file origin does not match viewer's");
       }
     } catch (ex) {
